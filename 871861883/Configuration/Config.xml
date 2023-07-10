@@ -1,0 +1,249 @@
+<!--
+
+	Map Size reference
+
+			  Civ V       Civ VI 	YnAMP (2:1)
+	 
+	Dual       40x24       44x26 	-
+	Tiny       55x36       60x36 	-
+	Small      66x42       74x46 	84x44
+	Standard   80x52       84x54 	96x50
+	Large     104x64       96x60	108x56
+	Huge      128x80      106x66  	120x62
+	Enormous              128x80	140x74
+	Giant     180x94      180x94	180x94
+	Ludicrous N/A        230x115	200x104
+
+-->
+
+<GameInfo>
+	
+	<MapSizes>
+		<Update>
+			<Set MaxPlayers="62" MaxCityStates="60"/>
+		</Update>
+
+		<Replace MapSizeType="MAPSIZE_SMALL21" 		Name="LOC_MAPSIZE_SMALL21_NAME" Description="LOC_MAPSIZE_SMALL21_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="6" MinCityStates="0" MaxCityStates="60" DefaultCityStates="9" SortIndex="31" />
+		<Replace MapSizeType="MAPSIZE_STANDARD21" 	Name="LOC_MAPSIZE_STANDARD21_NAME" Description="LOC_MAPSIZE_STANDARD21_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="8" MinCityStates="0" MaxCityStates="60" DefaultCityStates="12" SortIndex="41" />
+		<Replace MapSizeType="MAPSIZE_LARGE21" 		Name="LOC_MAPSIZE_LARGE21_NAME" Description="LOC_MAPSIZE_LARGE21_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="10" MinCityStates="0" MaxCityStates="60" DefaultCityStates="15" SortIndex="51" />
+		<Replace MapSizeType="MAPSIZE_HUGE21" 		Name="LOC_MAPSIZE_HUGE21_NAME" Description="LOC_MAPSIZE_HUGE21_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="12" MinCityStates="0" MaxCityStates="60" DefaultCityStates="18" SortIndex="61" />			
+		<Replace MapSizeType="MAPSIZE_ENORMOUS21" 	Name="LOC_MAPSIZE_ENORMOUS21_NAME" Description="LOC_MAPSIZE_ENORMOUS21_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="16" MinCityStates="0" MaxCityStates="60" DefaultCityStates="24" SortIndex="71" />
+		<Replace MapSizeType="MAPSIZE_ENORMOUS" 	Name="LOC_MAPSIZE_ENORMOUS_NAME" Description="LOC_MAPSIZE_ENORMOUS_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="16" MinCityStates="0" MaxCityStates="60" DefaultCityStates="24" SortIndex="70" />
+		<Replace MapSizeType="MAPSIZE_GIANT" 		Name="LOC_MAPSIZE_GIANT_NAME" Description="LOC_MAPSIZE_GIANT_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="26" MinCityStates="0" MaxCityStates="60" DefaultCityStates="37" SortIndex="80" />
+		<Replace MapSizeType="MAPSIZE_LUDICROUS" 	Name="LOC_MAPSIZE_LUDICROUS_NAME" Description="LOC_MAPSIZE_LUDICROUS_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="26" MinCityStates="0" MaxCityStates="60" DefaultCityStates="37" SortIndex="90" />
+		<Replace MapSizeType="MAPSIZE_OVERSIZED" 	Name="LOC_MAPSIZE_OVERSIZED_NAME" Description="LOC_MAPSIZE_OVERSIZED_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="34" MinCityStates="0" MaxCityStates="60" DefaultCityStates="37" SortIndex="90" />
+		<!--
+		<Replace MapSizeType="MAPSIZE_LUDICROUS_EARTH" 			Name="LOC_MAPSIZE_MAX_NAME" Description="LOC_MAPSIZE_MAX_DESCRIPTION" MinPlayers="2" MaxPlayers="62" DefaultPlayers="26" MinCityStates="0" MaxCityStates="60" DefaultCityStates="37" SortIndex="95" />	
+		-->
+	</MapSizes>
+
+	<Parameters>
+		<!--
+		<Update>
+			<Where Name="LOC_MAP_RESOURCES_NAME"/>
+			<Set SortIndex="270"/>
+		</Update>
+		-->
+		
+		<Replace ParameterId="MajorCivilizationsCount" 	Name="LOC_MAJOR_CIVILIZATION_COUNT_NAME" 	Description="LOC_MAJOR_CIVILIZATION_COUNT_DESCRIPTION" 	Domain="MajorCivilizationsCount" 	ConfigurationGroup="Game" 	ConfigurationId="MajorCivilizationsCount" 	GroupId="GameOptions" 	SupportsHotSeat='0' SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SortIndex="50"/>
+		<Replace ParameterId="OnlyLeadersWithTSL"		Name="LOC_MAP_TSL_LEADERS_NAME" 			Description="LOC_MAP_TSL_LEADERS_DESCRIPTION" 			Domain="bool" 	DefaultValue="0" 	ConfigurationGroup="Map" 	ConfigurationId="OnlyLeadersWithTSL" 		GroupId="MapOptions" 	SupportsHotSeat='0' SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SortIndex="51"/>
+		<Replace ParameterId="FakeOnlyLeadersWithTSL"	Name="LOC_MAP_TSL_LEADERS_NAME" 			Description="LOC_MAP_TSL_LEADERS_NEED_DB_DESCRIPTION"	Domain="bool" 	DefaultValue="0" 	ConfigurationGroup="Map" 	ConfigurationId="FakeOnlyLeadersWithTSL" 	GroupId="MapOptions" 	SupportsHotSeat='0' SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" ReadOnly="1" SortIndex="51"/>
+		<Replace ParameterId="BanLeaders" 				Name="LOC_MAP_BAN_LEADERS_NAME" 			Description="LOC_MAP_BAN_LEADERS_DESCRIPTION" 			Domain="bool" 	DefaultValue="0" 	ConfigurationGroup="Map" 	ConfigurationId="BanLeaders" 				GroupId="MapOptions" 	SupportsHotSeat='0' SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" SortIndex="52"/>
+
+		<!--	Map dimension to display custom section sizes		-->
+		<Row ParameterId="MapDimension"	Name="LOC_MAP_DIMENSION_NAME"	Description="LOC_MAP_DIMENSION_DESCRIPTION" Domain="text" Visible="1" DefaultValue="0x0 (0)" ConfigurationGroup="Map" ConfigurationId="MapDimension"	GroupId="MapOptions" SupportsHotSeat='0' SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" ReadOnly="1" SortIndex="227"/>
+		
+		<!--	Add missing Strategic resources on import		-->
+		<Replace ParameterId="PlaceAllStrategics" 		Name="LOC_MAP_ALL_STRATEGICS_NAME" Description="LOC_MAP_ALL_STRATEGICS_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="PlaceAllStrategics" GroupId="MapOptions" SortIndex="269"/>
+		
+		<!--	Culturally Linked Start Position		-->
+		<Replace ParameterId="CulturallyLinkedStart" Name="LOC_CULTURALLY_LINKED_START_NAME" Description="LOC_CULTURALLY_LINKED_START_DESCRIPTION" Domain="CulturallyLinkedStart" DefaultValue="PLACEMENT_ETHNIC" ConfigurationGroup="Map" ConfigurationId="CulturallyLinkedStart" GroupId="MapOptions" Hash="0" SortIndex="287"/>
+
+		<!--	Team Linked Start Position (depending on Culturally Linked Start)		-->
+		<Replace ParameterId="TeamLinkedStart" 	Name="LOC_TEAM_LINKED_NAME" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="TeamLinkedStart" GroupId="MapOptions" SupportsLANMultiplayer="1" SupportsInternetMultiplayer="1" SupportsHotSeat="1" SortIndex="296"/>
+
+		<!--	Option to use Leaders TSL if available		-->
+		<Replace ParameterId="LeaderTSL" Name="LOC_MAP_LEADER_TSL_NAME" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="LeaderTSL" GroupId="MapOptions" SortIndex="296"/>
+
+		<!--	Option to use Alternate TSL if available		-->
+		<Replace ParameterId="AlternateTSL" Name="LOC_MAP_ALTERNATE_TSL_NAME" Description="" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="AlternateTSL" GroupId="MapOptions" SortIndex="297"/>
+		
+		<!--	Option to use Alternate placement if no TSL if available		-->
+		<Replace ParameterId="AlternatePlacement" Name="LOC_MAP_ALTERNATE_PLACEMENT_NAME" Description="LOC_MAP_ALTERNATE_PLACEMENT_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="AlternatePlacement" GroupId="MapOptions" SortIndex="298"/>	
+		
+		<!--	New option for all maps to prevent Ice adjacent to land (help circumnavigation)		-->
+		<Replace ParameterId="NoIceAdjacentToLand" Name="LOC_MAP_NO_ICE_ADJACENT_TO_LAND_NAME" Description="LOC_MAP_NO_ICE_ADJACENT_TO_LAND_DESC" Domain="bool" DefaultValue="1" ConfigurationGroup="Map" ConfigurationId="NoIceAdjacentToLand" GroupId="MapOptions" SortIndex="2000"/>
+
+		<!--	New option for all maps to launch a game without city states
+		<Replace ParameterId="NoCityStates" Name="LOC_MAP_NO_CITY_STATE_NAME" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="NoCityStates" GroupId="AdvancedOptions" SortIndex="2020"/>
+		-->		
+		
+		<!--	Some Settings where linked to "RULESET_STANDARD", make them available with all		-->
+		<Replace ParameterId="NoGoodyHuts" Name="LOC_GAME_NO_GOODY_HUTS" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAME_NO_GOODY_HUTS" GroupId="AdvancedOptions" SortIndex="2010"/>
+		<Replace ParameterId="NoBarbarians" Name="LOC_GAME_NO_BARBARIANS" Description="" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" GroupId="AdvancedOptions" SortIndex="2010"/>
+
+		<!--	Option to use only generic city names (no civ-specific names)		-->
+		<Replace ParameterId="OnlyGenericCityNames" Name="LOC_MAP_ONLY_GENERIC_CITY_NAMES_NAME" Description="LOC_MAP_ONLY_GENERIC_CITY_NAMES_DESC" Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="OnlyGenericCityNames" GroupId="MapOptions" SortIndex="2001"/>
+
+		<Replace ParameterId="TurnsBeforeBarbarians" Name="LOC_TURNS_BEFORE_BARBARIANS_NAME" Description="LOC_TURNS_BEFORE_BARBARIANS_DESCRIPTION" Domain="uint" Hash="0" DefaultValue="7" ConfigurationGroup="Game" ConfigurationId="TurnsBeforeBarbarians" GroupId="AdvancedOptions" SortIndex="2999"/>
+
+	</Parameters>
+
+	<DomainRanges>
+		<Replace Domain="MajorCivilizationsCount" 	MinimumValue="2" MaximumValue="62"/>
+	</DomainRanges>
+	
+	<DomainValues>
+		<Replace Domain="ResourcesPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_RESOURCES_PLACEMENT_DEFAULT_NAME" Description="LOC_MAP_RESOURCES_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="ResourcesPlacement" Value="PLACEMENT_IMPORT" 	Name="LOC_MAP_RESOURCES_PLACEMENT_IMPORT_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_IMPORT_DESCRIPTION" 	SortIndex="20"/>
+		<Replace Domain="ResourcesPlacement" Value="PLACEMENT_EMPTY" 	Name="LOC_MAP_PLACEMENT_EMPTY_NAME" 			Description="LOC_MAP_PLACEMENT_EMPTY_DESCRIPTION" 				SortIndex="30"/>
+		
+		<Replace Domain="ResourcesExclusion" Value="PLACEMENT_DEFAULT" 	Name="LOC_YNAMP_DEACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="ResourcesExclusion" Value="PLACEMENT_EXCLUDE" 	Name="LOC_YNAMP_ACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_EXCLUDE_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="PlaceAllLuxuries" Value="PLACEMENT_DEFAULT" 	Name="LOC_YNAMP_DEACTIVATED_NAME" 	Description="LOC_MAP_ALL_LUXURIES_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="PlaceAllLuxuries" Value="PLACEMENT_REQUEST" 	Name="LOC_YNAMP_ACTIVATED_NAME" 	Description="LOC_MAP_ALL_LUXURIES_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="RealDeposits" Value="PLACEMENT_DEFAULT" 	Name="LOC_YNAMP_DEACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="RealDeposits" Value="PLACEMENT_DEPOSIT" 	Name="LOC_YNAMP_ACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_RWDEPOSIT_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="RequestedResources" Value="PLACEMENT_DEFAULT" 	Name="LOC_YNAMP_DEACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="RequestedResources" Value="PLACEMENT_REQUEST" 	Name="LOC_YNAMP_ACTIVATED_NAME" 	Description="LOC_MAP_RESOURCES_REQUESTED_DESCRIPTION" 	SortIndex="20"/>	
+		
+		<Replace Domain="FeaturesPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_FEATURES_PLACEMENT_DEFAULT_NAME" 	Description="LOC_MAP_FEATURES_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="FeaturesPlacement" Value="PLACEMENT_IMPORT" 	Name="LOC_MAP_FEATURES_PLACEMENT_IMPORT_NAME" 	Description="LOC_MAP_FEATURES_PLACEMENT_IMPORT_DESCRIPTION" 	SortIndex="20"/>
+		<Replace Domain="FeaturesPlacement" Value="PLACEMENT_EMPTY" 	Name="LOC_MAP_PLACEMENT_EMPTY_NAME" 			Description="LOC_MAP_PLACEMENT_EMPTY_DESCRIPTION" 				SortIndex="30"/>		
+		
+		<Replace Domain="CivilizationPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_CIVILIZATIONS_PLACEMENT_DEFAULT_NAME" Description="LOC_MAP_CIVILIZATIONS_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="CivilizationPlacement" Value="PLACEMENT_TSL" 		Name="LOC_MAP_CIVILIZATIONS_PLACEMENT_TSL_NAME" 	Description="LOC_MAP_CIVILIZATIONS_PLACEMENT_TSL_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="CulturallyLinkedStart" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_PLACEMENT_RANDOM_NAME" 		Description="LOC_MAP_LINKED_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="CulturallyLinkedStart" Value="PLACEMENT_ETHNIC"	Name="LOC_MAP_LINKED_PLACEMENT_ETHNIC_NAME" Description="LOC_MAP_LINKED_PLACEMENT_ETHNIC_DESCRIPTION" 	SortIndex="20"/>
+		<Replace Domain="CulturallyLinkedStart" Value="PLACEMENT_DISTANCE"	Name="LOC_MAP_LINKED_PLACEMENT_DISTANCE_NAME" Description="LOC_MAP_LINKED_PLACEMENT_DISTANCE_DESCRIPTION" SortIndex="30"/>
+		
+		<Replace Domain="ContinentsPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_CONTINENTS_PLACEMENT_DEFAULT_NAME" 	Description="LOC_MAP_CONTINENTS_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="ContinentsPlacement" Value="PLACEMENT_IMPORT" 		Name="LOC_MAP_CONTINENTS_PLACEMENT_IMPORT_NAME" 	Description="LOC_MAP_CONTINENTS_PLACEMENT_IMPORT_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="ContinentModel" Value="SEVEN_CONTINENT" 	Name="LOC_MAP_CONTINENTS_MODEL_SEVEN_CONTINENT_NAME" 	Description="LOC_MAP_CONTINENTS_MODEL_SEVEN_CONTINENT_DESCRIPTION" SortIndex="10"/>
+		<Replace Domain="ContinentModel" Value="SUB_CONTINENT" 		Name="LOC_MAP_CONTINENTS_MODEL_SUBCONTINENT_NAME" 		Description="LOC_MAP_CONTINENTS_MODEL_SUBCONTINENT_DESCRIPTION" 	SortIndex="20"/>
+		
+		<Replace Domain="RiversPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_RIVERS_PLACEMENT_DEFAULT_NAME" 	Description="LOC_MAP_RIVERS_PLACEMENT_DEFAULT_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="RiversPlacement" Value="PLACEMENT_IMPORT" 		Name="LOC_MAP_RIVERS_PLACEMENT_IMPORT_NAME" 	Description="LOC_MAP_RIVERS_PLACEMENT_IMPORT_DESCRIPTION" 	SortIndex="20"/>
+		<Replace Domain="RiversPlacement" Value="PLACEMENT_EMPTY" 		Name="LOC_MAP_PLACEMENT_EMPTY_NAME" 			Description="LOC_MAP_PLACEMENT_EMPTY_DESCRIPTION" 				SortIndex="30"/>
+		
+		<Replace Domain="NaturalWondersPlacement" Value="PLACEMENT_DEFAULT" 	Name="LOC_MAP_NATURAL_WONDERS_PLACEMENT_DEFAULT_NAME" 	Description="LOC_MAP_NATURAL_WONDERS_PLACEMENT_DEFAULT_DESCRIPTION" SortIndex="10"/>
+		<Replace Domain="NaturalWondersPlacement" Value="PLACEMENT_IMPORT" 		Name="LOC_MAP_NATURAL_WONDERS_PLACEMENT_IMPORT_NAME" 	Description="LOC_MAP_NATURAL_WONDERS_PLACEMENT_IMPORT_DESCRIPTION" 	SortIndex="20"/>
+		<Replace Domain="NaturalWondersPlacement" Value="PLACEMENT_EMPTY" 		Name="LOC_MAP_PLACEMENT_EMPTY_NAME" 			Description="LOC_MAP_PLACEMENT_EMPTY_DESCRIPTION" 			SortIndex="30"/>
+		
+		<Replace Domain="ForceTSL" Value="FORCE_TSL_OFF" 	Name="LOC_MAP_FORCE_TSL_OFF" 	Description="LOC_MAP_FORCE_TSL_OFF_DESCRIPTION" 	SortIndex="10"/>
+		<Replace Domain="ForceTSL" Value="FORCE_TSL_CS" 	Name="LOC_MAP_FORCE_TSL_CS" 	Description="LOC_MAP_FORCE_TSL_CS_DESCRIPTION" 		SortIndex="20"/>
+		<Replace Domain="ForceTSL" Value="FORCE_TSL_AI" 	Name="LOC_MAP_FORCE_TSL_AI" 	Description="LOC_MAP_FORCE_TSL_AI_DESCRIPTION" 		SortIndex="30"/>
+		<Replace Domain="ForceTSL" Value="FORCE_TSL_ALL" 	Name="LOC_MAP_FORCE_TSL_ALL" 	Description="LOC_MAP_FORCE_TSL_ALL_DESCRIPTION" 	SortIndex="40"/>
+
+	</DomainValues>
+
+	<ParameterDependencies>
+		<!--
+		<Row ParameterId="CityStateCount" ConfigurationGroup="Game" ConfigurationId="WORLD_BUILDER" Operator="NotEquals" ConfigurationValue="1" />
+		<Delete>
+			<Where ParameterId="CityStateCount" ConfigurationId="WORLD_BUILDER"  />
+		</Delete>
+		-->
+		<Delete ParameterId="CityStateCount" ConfigurationId="WORLD_BUILDER" />
+	
+		<Replace ParameterId="Resources"				ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="Resources" 				ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_EMPTY"/>
+		<Replace ParameterId="Rainfall"					ConfigurationGroup="Map" ConfigurationId="FeaturesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="Rainfall" 				ConfigurationGroup="Map" ConfigurationId="FeaturesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_EMPTY"/>
+		<Replace ParameterId="CulturallyLinkedStart" 	ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="NotEquals" 	ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="MapSize" 					ConfigurationGroup="Map" ConfigurationId="HideSize" 				Operator="NotEquals" 	ConfigurationValue="1"/>
+		<Replace ParameterId="ResourcesExclusion" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="ResourcesExclusion" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_EMPTY"/>
+		<Replace ParameterId="RealDeposits" 			ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="Equals" 		ConfigurationValue="PLACEMENT_DEFAULT"/>
+		<Replace ParameterId="RequestedResources" 		ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="RequestedResources" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals"	ConfigurationValue="PLACEMENT_EMPTY"/>
+		<Replace ParameterId="StartPosition" 			ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="NotEquals" 	ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="ForceTSL" 				ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="ForceTSL" 				ConfigurationGroup="Map" ConfigurationId="CityPlacement" 			Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="ForceTSL" 				ConfigurationGroup="Map" ConfigurationId="CityPlacement" 			Operator="NotEquals" 	ConfigurationValue="PLACEMENT_TERRAIN"/>
+		<Replace ParameterId="ForceTSL" 				ConfigurationGroup="Map" ConfigurationId="CityPlacement" 			Operator="NotEquals" 	ConfigurationValue="PLACEMENT_MIXED"/>
+		<Replace ParameterId="ForceTSL" 				ConfigurationGroup="Map" ConfigurationId="CityPlacement" 			Operator="NotEquals" 	ConfigurationValue="PLACEMENT_CITY_MAP"/>
+		<Replace ParameterId="LeaderTSL" 				ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="AlternateTSL" 			ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="AlternatePlacement" 		ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="OnlyLeadersWithTSL"		ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="FakeOnlyLeadersWithTSL"	ConfigurationGroup="Map" ConfigurationId="CivilizationPlacement" 	Operator="Equals" 		ConfigurationValue="PLACEMENT_TSL"/>
+		<Replace ParameterId="OnlyGenericCityNames" 	ConfigurationGroup="Map" ConfigurationId="AutoCityNaming" 			Operator="Equals" 		ConfigurationValue="1"/>
+		<Replace ParameterId="PlaceAllLuxuries" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="PlaceAllLuxuries" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_EMPTY"/>
+		<Replace ParameterId="PlaceAllStrategics" 		ConfigurationGroup="Map" ConfigurationId="ResourcesPlacement" 		Operator="Equals" 		ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="NoIceAdjacentToLand"		ConfigurationGroup="Map" ConfigurationId="FeaturesPlacement" 		Operator="NotEquals" 	ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="ContinentModel"			ConfigurationGroup="Map" ConfigurationId="ContinentsPlacement" 		Operator="Equals" 		ConfigurationValue="PLACEMENT_IMPORT"/>
+		<Replace ParameterId="TeamLinkedStart"			ConfigurationGroup="Map" ConfigurationId="CulturallyLinkedStart" 	Operator="NotEquals" 	ConfigurationValue="PLACEMENT_DEFAULT"/>
+		
+		<Replace ParameterId="TurnsBeforeBarbarians" 	ConfigurationGroup="Game" ConfigurationId="GAME_NO_BARBARIANS" 		Operator="Equals" ConfigurationValue="0" />
+		
+	</ParameterDependencies>
+	
+	<!-- doesn't works as expected ? Use the MapSupportedValues instead...
+	<MapUnSupportedValues>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_ENORMOUS" />
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_GIANT" />
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_LUDICROUS" />
+	</MapUnSupportedValues>
+	-->	
+	
+	<MapSupportedValues>		
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_DUEL" 		/>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_TINY" 		/>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_SMALL" 		/>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_STANDARD" 	/>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_LARGE" 		/>
+		<Replace Map="InlandSea.lua" Domain="StandardMapSizes" Value="MAPSIZE_HUGE" 		/>
+	</MapSupportedValues>
+	
+	
+	
+	<!-- City States Configuration -->
+	<Parameters>
+		<!-- - ->
+		<Update>
+			<Where ParameterId="CityStateCount"/>
+			<Set GroupId="CityStatesOptions"/>
+		</Update>
+		<!-- -->
+		<!-- -->
+		<Update>
+			<Where ParameterId="CityStateCount"/>
+			<Set SortIndex="81"/>
+		</Update>
+		<Update>
+			<Where ParameterId="CityStates"/>
+			<Set SortIndex="82"/>
+		</Update>
+		<!-- -->
+		
+		<!--	Option to toggle manual selection of City States ->
+		<Replace ParameterId="SelectCityStates" Name="LOC_MAP_SELECT_CITY_STATES_NAME" 	Description="LOC_MAP_SELECT_CITY_STATES_DESCRIPTION" 	Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="SelectCityStates" GroupId="MapOptions" SortIndex="82"/>
+		<Replace ParameterId="LimitCityStates" 	Name="LOC_MAP_LIMIT_CITY_STATES_NAME" 	Description="LOC_MAP_LIMIT_CITY_STATES_DESCRIPTION" 	Domain="bool" DefaultValue="0" ConfigurationGroup="Map" ConfigurationId="LimitCityStates" GroupId="MapOptions" SortIndex="82"/>
+		<!-- -->
+		<Replace ParameterId="SelectCityStatesSP" 	Name="LOC_CITYSTATES_OPTIONS_NAME" 	Description="LOC_CITYSTATES_OPTIONS_DESCRIPTION" 		Domain="SelectCityStates" 	DefaultValue="RANDOM" 	ConfigurationGroup="Map" ConfigurationId="SelectCityStates" 	GroupId="MapOptions" SupportsLANMultiplayer="0" SupportsInternetMultiplayer="0" Visible="1" SortIndex="83"/>
+		<!-- ->
+		<Replace ParameterId="SelectCityStatesMP" 	Name="LOC_CITYSTATES_OPTIONS_NAME" 	Description="LOC_CITYSTATES_OPTIONS_DESCRIPTION" 		Domain="SelectCityStates" 	DefaultValue="RANDOM" 	ConfigurationGroup="Map" ConfigurationId="SelectCityStates" 	GroupId="MapOptions" SupportsLANMultiplayer="1" SupportsInternetMultiplayer="1" Visible="1" SortIndex="83"/>
+		<Replace ParameterId="FakeSelectCityStates" Name="LOC_CITYSTATES_OPTIONS_NAME" 	Description="LOC_FAKE_SELECT_CITY_STATES_DESCRIPTION" 	Domain="bool" 				DefaultValue="0" 		ConfigurationGroup="Map" ConfigurationId="FakeSelectCityStates" GroupId="MapOptions" ReadOnly="1" SortIndex="83"/>
+		<!-- -->
+	</Parameters>
+	
+	<DomainValues>
+		<Replace Domain="SelectCityStates"	Value="RANDOM"				Name="LOC_MAP_CS_OPTION_DEFAULT_NAME" 				Description="LOC_MAP_CS_OPTION_DEFAULT_DESCRIPTION" 			SortIndex="10"/>
+		<Replace Domain="SelectCityStates"	Value="SELECTION"			Name="LOC_MAP_CS_OPTION_SELECTION_NAME" 			Description="LOC_MAP_CS_OPTION_SELECTION_DESCRIPTION"			SortIndex="20"/>
+		<Replace Domain="SelectCityStates"	Value="UNCAPPED_SELECTION"	Name="LOC_MAP_CS_OPTION_UNCAPPED_SELECTION_NAME" 	Description="LOC_MAP_CS_OPTION_UNCAPPED_SELECTION_DESCRIPTION"	SortIndex="30"/>
+		<Replace Domain="SelectCityStates"	Value="ONLY_SELECTION"		Name="LOC_MAP_CS_OPTION_ONLY_SELECTION_NAME" 		Description="LOC_MAP_CS_OPTION_ONLY_SELECTION_DESCRIPTION"		SortIndex="40"/>
+		<Replace Domain="SelectCityStates"	Value="EXCLUSION"			Name="LOC_MAP_CS_OPTION_EXCLUSION_NAME"		 		Description="LOC_MAP_CS_OPTION_EXCLUSION_DESCRIPTION"			SortIndex="50"/>
+	</DomainValues>
+	
+	<ParameterDependencies>
+		<!-- -->
+	</ParameterDependencies>
+
+</GameInfo>
